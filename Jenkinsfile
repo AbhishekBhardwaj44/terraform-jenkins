@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    environmemts {
+        AWS_ACCESS_KEY_ID="AKIAW3QL66DSXPQB7OFR"
+        AWS_SECRET_ACCESS_KEY="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"
+        AWS_DEFAULT_REGION="ap-south-1"
 
     stages {
         stage('Checkout GIT') {
