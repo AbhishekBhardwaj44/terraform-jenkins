@@ -1,9 +1,6 @@
-resource "aws_instance" "web" {
-  ami           = "ami-0ba259e664698cbfc"
-  instance_type = "t2.micro"
-  key_name      = "ec2-key"
-  
+resource "aws_s3_bucket" "s3linux" {
+  bucket = "my-navibuaabh-bucket"
+
   tags = {
-    Name = "ec2terraform"
-  }
-}
+    Name        = "My bucket"
+    Environment = "Dev"
