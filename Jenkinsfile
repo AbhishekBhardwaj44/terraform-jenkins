@@ -34,9 +34,5 @@ pipeline {
             }
         }
     }
-    post {
-        always {
-            archiveArtifacts artifacts: '*.tfstate', fingerprint: true
-        }
-    }
+
 }
