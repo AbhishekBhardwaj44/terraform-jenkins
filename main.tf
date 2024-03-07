@@ -1,8 +1,12 @@
-resource "aws_s3_bucket" "s3linux" {
-  bucket = "my-navibuaabh-bucket"
+provider "aws" {
+    region = "ap-south-1"
+}
+resource "aws_instance" "s3linux" {
+  ami           = ""
+  instance_type = "t2.micro"
+  key_name      = "ec2-key"
 
   tags = {
-    Name        = "My bucket"
-    Environment = "Dev"
-}
+     Name = "hello-jenkins"
+  }
 }
