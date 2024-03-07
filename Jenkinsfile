@@ -16,6 +16,11 @@ pipeline {
                 sh 'terraform init -upgrade'
             }
         }
+        stage('terraform fmt') {
+            steps {
+                sh 'terraform fmt main.tf'
+            }
+        }
         stage('Plan') {
             steps {
                 sh 'terraform plan -out main.tf'
