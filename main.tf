@@ -4,7 +4,7 @@ provider "aws" {
 resource "aws_instance" "s3linux" {
   ami           = "ami-0ba259e664698cbfc"
   instance_type = "t2.micro"
-  key_name      = "ec2-key"
+  key_name      = "abhi-key"
 
   tags = {
      Name = "hello-jenkins"
