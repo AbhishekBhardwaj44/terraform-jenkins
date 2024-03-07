@@ -4,3 +4,5 @@ resource "aws_s3_bucket" "s3linux" {
   tags = {
     Name        = "My bucket"
     Environment = "Dev"
+}
+}
